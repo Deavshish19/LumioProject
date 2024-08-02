@@ -39,32 +39,11 @@ This project involves the following tasks:
 
 - Salesforce Developer Edition account
 
-### Setup
-
-1. **Create Custom Fields:**
-   - Add the necessary custom field `Total_Quantity__c` on the Order object.
-
-2. **Use Standard Salesforce Objects:**
-   - Utilize standard Salesforce objects for Orders and Order Products.
-
 ### Development Environment
 
 - Use Salesforce Developer Console or Visual Studio Code with the Salesforce Extension Pack for development.
 - Follow best practices for code development and documentation.
 
-### Submission
-
-1. **Create a GitHub Repository:**
-   - Make a public GitHub repository for your project.
-
-2. **Push Code to Repository:**
-   - Push all your code (Apex Triggers, Classes, LWC, etc.) to the GitHub repository.
-
-3. **Include Documentation:**
-   - Add this README file to the repository explaining how to set up and test the project.
-
-4. **Share the Link:**
-   - Share the link to your GitHub repository (e.g., `https://github.com/Deavshish19/LumioProject.git`).
 
 ## How to Set Up and Test the Project
 
