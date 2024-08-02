@@ -1,47 +1,85 @@
-# Lumio Project
+# LumioProject
 
-## Overview
-Welcome to the Lumio Project repository. This project contains Salesforce code, including Apex Triggers, Apex Classes, Lightning Web Components (LWC), and related files.
+Welcome to the LumioProject, a Salesforce Developer Technical Interview Project designed to assess your Salesforce development skills, focusing on Apex coding and Lightning Web Components (LWC).
 
-## Setup
+## Project Overview
+
+This project involves the following tasks:
+
+1. **Apex Trigger: Order Quantity Update**
+   - **Objective:** Create an Apex Trigger on the Order object to update the total quantity of products ordered whenever a new Order Product is added.
+   - **Requirements:**
+     - The trigger should fire after an Order Product (OrderItem) is inserted.
+     - Calculate the total quantity of all products associated with the Order.
+     - Update a custom field on the Order object (`Total_Quantity__c`).
+
+2. **Apex Class: Inventory Management**
+   - **Objective:** Develop an Apex Class to manage inventory levels for products.
+   - **Requirements:**
+     - Implement methods to reduce inventory when an Order is placed and replenish inventory when an Order is canceled.
+     - Implement unit tests to cover the functionality.
+
+3. **Custom Page in Lightning Web Component (LWC): Order Summary**
+   - **Objective:** Build a Lightning Web Component to display a summary of an Order, including its products and total quantity.
+   - **Requirements:**
+     - Fetch Order data and related Order Products.
+     - Display Order details (Order Number, Customer Name, Total Quantity).
+     - Provide a simple UI with a table format.
+
+4. **Manufacturing Cloud Integration: Production Capacity Check**
+   - **Objective:** Integrate with Manufacturing Cloud to check production capacity before an Order is confirmed.
+   - **Requirements:**
+     - Create an Apex method to query production capacity.
+     - Ensure the Order quantity does not exceed the available production capacity.
+     - Display an appropriate message if capacity is exceeded.
+
+## Getting Started
 
 ### Prerequisites
-- **Salesforce CLI**: Install [Salesforce CLI](https://developer.salesforce.com/tools/sfdxcli).
-- **Visual Studio Code (VS Code)**: Install [VS Code](https://code.visualstudio.com/) and the Salesforce extensions.
-- **Salesforce Org**: Access to a Salesforce Org is required for deployment and testing.
 
-### Clone the Repository
-1. Open a terminal.
-2. Clone the repository:
-    ```bash
-    git clone https://github.com/Deavshish19/LumioProject.git
-    ```
-3. Navigate into the project directory:
-    ```bash
-    cd LumioProject
-    ```
+- Salesforce Developer Edition account
 
-### Authenticate to Salesforce Org
-Authenticate with your Salesforce Org:
-```bash
-sfdx auth:web:login -a YourOrgAlias
+### Setup
 
+1. **Create Custom Fields:**
+   - Add the necessary custom field `Total_Quantity__c` on the Order object.
 
-# Salesforce DX Project: Next Steps
+2. **Use Standard Salesforce Objects:**
+   - Utilize standard Salesforce objects for Orders and Order Products.
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+### Development Environment
 
-## How Do You Plan to Deploy Your Changes?
+- Use Salesforce Developer Console or Visual Studio Code with the Salesforce Extension Pack for development.
+- Follow best practices for code development and documentation.
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+### Submission
 
-## Configure Your Salesforce DX Project
+1. **Create a GitHub Repository:**
+   - Make a public GitHub repository for your project.
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+2. **Push Code to Repository:**
+   - Push all your code (Apex Triggers, Classes, LWC, etc.) to the GitHub repository.
 
-## Read All About It
+3. **Include Documentation:**
+   - Add this README file to the repository explaining how to set up and test the project.
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+4. **Share the Link:**
+   - Share the link to your GitHub repository (e.g., `https://github.com/Deavshish19/LumioProject.git`).
+
+## How to Set Up and Test the Project
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/Deavshish19/LumioProject.git
+
+### Deploy to Salesforce:
+
+Deploy the Apex Trigger, Apex Class, and LWC to your Salesforce Developer Edition account.
+
+### Test the Functionality:
+
+Add an Order Product and verify the Apex Trigger updates the total quantity.
+Place and cancel orders to test inventory management.
+View the Order Summary LWC to check the Order details.
+Confirm the integration with Manufacturing Cloud by checking production capacity before order confirmation.   
